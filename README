@@ -1,2 +1,7 @@
 Uso: ./mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
 	 python mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
+	 
+Trocar CHATID depois de subscrever ao Bot do Telegram.
+	Envie uma mensagem ao bot e olhe a URL: https://api.telegram.org/bot${COLOQUE O TOKEN AQUI}/getUpdates
+	No JSON aparecerá o CHATID.
+Token no source do GITHUB está desatualizado (hehe!).
