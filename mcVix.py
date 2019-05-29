@@ -73,6 +73,16 @@ def envia_telegram(browser, lista, esp, token, chatID):
 
 def main():
 
+    if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+        print "USO:\n\t./mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos\n\t./mcVix.py '000.000.000-00' '23/12/1900' '(Clínico Geral|Dentista|Enfermeiro|Psicologo)' 30"
+        sys.exit(1)
+
+    if len(sys.argv) < 5:
+        error_log = open('error.log', 'a')
+        error_log.writelines('[ '+ strftime("%Y-%m-%d | %H:%M:%S -0300", localtime()) + " ] ¬¬ Erro: Número errado de parâmetros.\n")
+        error_log.close()
+        sys.exit(2)
+
     ######### MACROS #########
     nCPF = sys.argv[1]
     nDNASC = sys.argv[2]

@@ -1,0 +1,2 @@
+Uso: ./mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
+	 python mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
