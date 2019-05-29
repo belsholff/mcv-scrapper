@@ -64,8 +64,8 @@ def coleta_vagas(browser, lista_especialidades, esp):
     return lista_vagas
 
 ######### FORMATA E ENVIA MENSAGEM PELO TELEGRAM #########
-def envia_telegram(browser, lista, token, chatID):
-    string = strftime("||||| %a, %d %b %Y %H:%M:%S -0300", localtime()) + ' |||||\n'
+def envia_telegram(browser, lista, esp, token, chatID):
+    string = "||||| " + esp + " |||||\n" + strftime("||||| %a, %d %b %Y %H:%M:%S", localtime()) + ' |||||\n'
     for item in lista:
         string += (item['nome'] + " -> " + str(item['vagas']) + " vagas;\n")
 
@@ -98,9 +98,9 @@ def main():
                     num_vagas += item['vagas']
 
                 if num_vagas != 0:
-                    envia_telegram(browser, listao, TOKEN_BOT_TELEGRAM, CHAT_ID)
+                    envia_telegram(browser, listao, entrada_especialidade, TOKEN_BOT_TELEGRAM, CHAT_ID)
 
-        time.sleep(INT_ATUALIZACAO) #executa a cada 40 segundos
+        time.sleep(INT_ATUALIZACAO) #executa a cada INT_ATUALIZACAO segundos
 
 if __name__ == '__main__':
     main()
