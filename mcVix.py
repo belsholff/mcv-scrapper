@@ -45,8 +45,8 @@ def busca_especialidades(browser, URL):
 
 def coleta_vagas(browser, lista_especialidades, esp):
     browser.open(lista_especialidades[esp]['link']) #lança exceção se o site não abrir
+    lista_vagas = []
     if browser.url == lista_especialidades[esp]['link']:
-        lista_vagas = []
         for item in browser.find_all('h4'):
             nome_medico = item.contents[1].text.encode('utf-8')
             # print nome_medico
