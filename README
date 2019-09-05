@@ -1,5 +1,11 @@
+Instale: python-pip com o apt ou similar
+	 use o pip para instalar a biblioteca robobrowser
+		 
+	 apt install -y python-pip
+	 pip install robobrowser
+		 
 Uso: ./mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
-	 python mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
+     python mcVix.py '$CPF_formatado' '$DATA_NASC_formatada' '$Especialidade' $LOOP_segundos
 	 
 Trocar CHATID depois de subscrever ao Bot do Telegram.
 	Envie uma mensagem ao bot e olhe a URL: https://api.telegram.org/bot${COLOQUE O TOKEN AQUI}/getUpdates
